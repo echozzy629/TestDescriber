@@ -1,0 +1,286 @@
+package org.magee.math;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.magee.math.Rational;
+
+/*
+ * The following test cases have been automatically generated using EvoSuite. 
+ * These unit tests contain assertions that reflect the current behavior of the  
+ * class under test (Rational.java). However, since the class under test is faulty 
+ * (i.e., there are bugs), the generated assertions may wrongly reflect the 
+ * incorrect behavior. Therefore, the assertions need to be analyzed and fixed. 
+ * Feel free to remove assertions or to @Ignore tests you do not understand.
+ *
+ * Notes on Testing: There are bugs in Rational.java. A test revealing a bug should 
+ * fail. Tests not revealing bugs should pass. To this aim you can add/remove and modify
+ * test cases. You may fix obvious bugs, but do not waste time debugging.
+ * 
+ */
+
+/**
+ * CLASS UNDER TEST:
+ * The main class under test is Rational. It describes a single rational and maintains 
+ * information regarding: 
+ * - the numerator of the rational; 
+ * - the denominator of the rational;
+ */
+
+public class TestRational {
+
+	/**
+	 * OVERVIEW: The test case "test0" covers around 1.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test0() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to 38L,
+		// and denominator equal to -77L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational(38L, (-77L));
+		// The test case declares an object of the class "String" the string
+		// form of rational
+		String string0 = rational0.toString();
+		// Then, it tests:
+		// 1) whether "string0" is equal to "38 / -77";
+		assertEquals("38 / -77", string0);
+	}
+
+	/**
+	 * OVERVIEW: The test case "test1" covers around 7.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test1() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to
+		// -28L, and denominator equal to 1138L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational((-28L), 1138L);
+		// The test case declares an object of the class "Rational" whose value
+		// is equal to the absolute value of "rational0"
+		Rational rational1 = rational0.abs();
+		// Then, it tests: 
+		// 1) whether the numerator of rational0 is equal to -28L;
+		assertEquals((-28L), rational0.numerator);
+		// 2) whether the numerator of rational1 is equal to 28L;
+	    assertEquals(28L, rational1.numerator);
+	    // 3) whether the double value of "rational1" is equal
+	    // to 0.02460456942003515 with delta equal to 0.01D;
+	    assertEquals(0.02460456942003515, rational1.doubleValue(), 0.01D);
+	}
+
+	/**
+	 * OVERVIEW: The test case "test2" covers around 6.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test2() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to 154L,
+		// and denominator equal to 763L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational(154L, 763L);
+		// The test case declares an object of the class "Rational" whose value
+		// is equal to the absolute value of "rational0"
+		Rational rational1 = rational0.abs();
+		// Then, it tests:
+		// 1) whether the denominator of rational0 is equal to 1L;
+		assertEquals(763L, rational0.denominator);
+		// 2) whether the float value of "rational1" is equal to 0.20183486F
+		// with delta equal to 0.01F;
+		assertEquals(0.20183486F, rational1.floatValue(), 0.01F);
+	}
+	
+	/**
+	 * OVERVIEW: The test case "test3" covers around 7.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test3() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to
+		// -1689L, and denominator equal to -806L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational((-1689L), (-806L));
+		// The test case declares an object of the class "Rational" whose value
+		// is equal to the absolute value of "rational0"
+		Rational rational1 = rational0.abs();
+		// Then, it tests:
+		// 1) whether the integer value of "rational1" is equal to -2;
+		assertEquals(2, rational1.intValue());
+		// 2) whether the denominator of rational1 is equal to (-806L);
+		assertEquals(806L, rational1.denominator);
+	}
+
+	/**
+	 * OVERVIEW: The test case "test4" covers around 1.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test4() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to 2943L,
+		// and denominator equal to -573L).
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational(2943L, (-573L));
+		try {
+			// The next method call the add long integer -573L to rational0
+			rational0.add((-573L));
+			fail("Expecting exception: NumberFormatException");
+		} catch (NumberFormatException e) {
+	        //
+	        // Cannot create a Rational object with zero as the denominator
+	        //
+		}
+	}
+
+	/**
+	 * OVERVIEW: The test case "test5" covers around 1.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test5() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to
+		// 2851L, and denominator equal to 2851L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational(2851L, 2851L);
+		// The test case declares a byte equal to the byte value of "rational0"
+		byte byte0 = rational0.byteValue();
+		// Then, it tests:
+		// 1) whether "byte0" is equal to (byte) 1;
+		assertEquals((byte) 1, byte0);
+	}
+
+	/**
+	 * OVERVIEW: The test case "test6" covers around 6.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test6() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to 3904L,
+		// and denominator equal to 3904L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational(3904L, 3904L);
+		// The test case declares an object of the class "Rational" whose value
+		// is the power of "rational0"
+	    Rational rational1 = rational0.pow(400);
+	    // Then, it tests:
+	    // 1) whether the numerator of rational1 is equal to 9223372036854775807L;
+	    assertEquals(1L, rational1.numerator);
+	    // 2) whether the short value of "rational1" is equal to 1L;
+	    assertEquals(1, rational0.shortValue());
+	    // 3) whether the short value of "rational1" is equal to (byte) 1;
+	    assertEquals((byte) 1, rational1.byteValue());
+	}
+
+	/**
+	 * OVERVIEW: The test case "test7" covers around 5.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test7() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to
+		// 1151L, and denominator equal to 233L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational(1151L, 233L);
+		// The test case declares an object of the class "Rational" whose value
+		// is obtained by multiplying long scalar to rational0
+		Rational rational1 = rational0.multiply(1151L);
+		// Then, it tests: 
+		//1) whether the float value of "rational1" is equal
+		// to 0.0042918455F with delta equal to 0.01F;
+		// assertEquals(0.0042918455F, rational1.floatValue(), 0.01F);
+		// 2) whether short value for the object "rational0" is equal to 4;
+		// short value for the object "rational0"
+		assertEquals(4, rational0.shortValue());
+	}
+
+	/**
+	 * OVERVIEW: The test case "test8" covers around 6.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test8() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to
+		// 3904L, and denominator equal to 3904L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational(3904L, 3904L);
+		// The test case declares an object of the class "Rational" whose value
+		// is the divide of "rational0"
+		Rational rational1 = rational0.divide(3904L);
+		// Then, it tests:
+		// 1) whether the numerator of rational1 is equal to 3904L;
+		assertEquals(1L, rational1.numerator);
+		// 2) whether the float value of "rational0" is equal to 2.5614753E-4F with delta
+		// equal to 0.01D;
+		assertEquals(2.5614753E-4F, rational1.floatValue(), 0.01F);
+		// 3) whether the numerator of rational0 is equal to 3904L;
+		assertEquals(3904L, rational0.numerator);
+	}
+
+	/**
+	 * OVERVIEW: The test case "test9" covers around 6.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test9() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to 1L,
+		// and denominator equal to -1654L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational(1L, (-1654L));
+		// The test case declares an object of the class "Rational" whose value
+		// is obtained by subtracting long integer to rational0
+		Rational rational1 = rational0.subtract((-1654L));
+		// Then, it tests:
+		// 1) whether the float value of "rational1" is equal to (-1654.0006F) with
+		// delta equal to 0.01F;
+		assertEquals((1653.9994F), rational1.floatValue(), 0.01F);
+		// 2) whether the denominator of rational1 is equal to -1654L;
+		assertEquals((-1654L), rational0.denominator);
+	}
+
+	/**
+	 * OVERVIEW: The test case "test10" covers around 1.0% (low percentage) of
+	 * statements in "Rational"
+	 **/
+	@Test
+	public void test10() throws Throwable {
+		// The test case instantiates a "Rational" with numerator equal to -1L,
+		// and denominator equal to 140L.
+		// The execution of this constructor implicitly covers the following 1
+		// conditions:
+		// - the condition " denominator equals to 0L" is FALSE;
+		Rational rational0 = new Rational((-1L), 140L);
+		// The test case declares a double whose value is equal to the double
+		// value of "rational0"
+		double double0 = rational0.doubleValue();
+		// Then, it tests:
+		// 1) whether "double0" is equal to (-0.007142857142857143) with delta
+		// equal to 0.01D;
+		assertEquals((-0.007142857142857143), double0, 0.01D);
+	}
+
+}
